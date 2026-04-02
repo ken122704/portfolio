@@ -11,13 +11,13 @@ export default function Footer() {
         
         {/* Left Side: Brand & Copyright */}
         <div className="flex flex-col">
-          <Link href="/" className="text-2xl font-bold tracking-tighter text-foreground block">
-            KEN<span className="text-brand">.</span>
-          </Link>
-          <p className="text-foreground/60 text-sm mt-2">
-            AI Automation Developer & Full-Stack Builder.
+          <Link href="/" className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          KEN
+        </Link>
+          <p className="text-foreground/60 text-sm mt-2 text-neutral-400 ">
+            Full-Stack Developer & AI Automation Specialist.
           </p>
-          <p className="text-foreground/40 text-xs mt-6">
+          <p className="text-foreground/40 text-xs mt-6 text-neutral-400 ">
             © {currentYear} Ken Charles I. Besa. All rights reserved.
           </p>
         </div>

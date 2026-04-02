@@ -14,7 +14,9 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4 inline-block">
+            About Me
+          </h2>
           <div className="w-20 h-1 bg-brand rounded-full"></div>
         </motion.div>
 
@@ -25,7 +27,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="md:col-span-2 space-y-6 text-foreground/80 leading-relaxed text-lg"
+            className="md:col-span-2 space-y-6 text-neutral-400  leading-relaxed text-lg"
           >
             <p>
               My journey in tech started at the foundational layer of AI. For four years, I worked as a Data Annotator, 
@@ -51,7 +53,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-6"
           >
-            <h3 className="text-xl font-semibold text-foreground border-b border-white/10 pb-4">
+            <h3 className="text-xl font-semibold text-neutral-400  border-b border-white/10 pb-4">
               Quick Facts
             </h3>
             
@@ -59,33 +61,33 @@ export default function About() {
               <div className="flex items-start gap-3">
                 <MapPin className="text-brand shrink-0 mt-1" size={20} />
                 <div>
-                  <p className="font-medium text-foreground">Location</p>
-                  <p className="text-sm text-foreground/60">Cagayan de Oro City, PH</p>
+                  <p className="font-medium text-neutral-400 ">Location</p>
+                  <p className="text-sm text-neutral-400 ">Cagayan de Oro City, PH</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
                 <GraduationCap className="text-brand shrink-0 mt-1" size={20} />
                 <div>
-                  <p className="font-medium text-foreground">Education</p>
-                  <p className="text-sm text-foreground/60">USTP (B.S. Computer Science)</p>
-                  <p className="text-xs text-foreground/50">2023 – 2027</p>
+                  <p className="font-medium text-neutral-400 ">Education</p>
+                  <p className="text-sm text-neutral-400 ">USTP (B.S. Computer Science)</p>
+                  <p className="text-xs text-neutral-400 ">2023 – 2027</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <Briefcase className="text-brand shrink-0 mt-1" size={20} />
                 <div>
-                  <p className="font-medium text-foreground">Experience</p>
-                  <p className="text-sm text-foreground/60">4 Years (Data Annotation)</p>
+                  <p className="font-medium text-neutral-400 ">Experience</p>
+                  <p className="text-sm text-neutral-400 ">4 Years (Data Annotation)</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <Code2 className="text-brand shrink-0 mt-1" size={20} />
                 <div>
-                  <p className="font-medium text-foreground">Focus</p>
-                  <p className="text-sm text-foreground/60">Full-Stack & Automations</p>
+                  <p className="font-medium text-neutral-400 ">Focus</p>
+                  <p className="text-sm text-neutral-400 ">Full-Stack & Automations</p>
                 </div>
               </div>
             </div>

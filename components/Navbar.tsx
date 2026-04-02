@@ -21,8 +21,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold tracking-tighter text-foreground">
-          KEN<span className="text-brand">.</span>
+        <Link href="/" className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          KEN
         </Link>
 
         {/* Desktop Nav & Button */}
@@ -32,7 +32,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-foreground/70 hover:text-white transition-colors"
+                className="text-sm font-medium text-neutral-400  hover:text-white transition-colors"
               >
                 {link.name}
               </Link>
