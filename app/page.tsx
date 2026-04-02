@@ -1,10 +1,11 @@
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
       <Hero />
-      {/* We will add About, Services, Experience, and Projects here next */}
+      <About />
     </div>
   );
 }
