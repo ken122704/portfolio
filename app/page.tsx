@@ -1,7 +1,10 @@
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
-    <main>
-      <p className="text-center text-neutral-400 mt-20">Portfolio loading...</p>
-    </main>
+    <div className="flex flex-col w-full">
+      <Hero />
+      {/* We will add About, Services, Experience, and Projects here next */}
+    </div>
   );
 }
