@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -12,12 +13,32 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // If we scroll down more than 50 pixels, trigger the glass effect
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/10"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled 
+          ? "bg-background/80 backdrop-blur-md border-b border-white/10 shadow-lg" 
+          : "bg-transparent border-b border-transparent"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
@@ -32,7 +53,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-neutral-400  hover:text-white transition-colors"
+                className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
               >
                 {link.name}
               </Link>
@@ -46,7 +67,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle (Visual placeholder for now) */}
+        {/* Mobile Menu Toggle */}
         <button className="md:hidden p-2 text-foreground hover:text-brand transition-colors">
           <span className="sr-only">Open menu</span>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
