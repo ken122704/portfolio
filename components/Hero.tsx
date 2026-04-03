@@ -113,20 +113,30 @@ export default function Hero() {
         {/* RIGHT COLUMN: Image */}
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="relative w-full max-w-md mx-auto lg:ml-auto lg:mr-0 aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(59,130,246,0.15)]"
+          animate={{ opacity: 1, x: 0, y: [0, -15, 0] }}
+          transition={{ 
+            opacity: { duration: 0.7, delay: 0.4 },
+            x: { duration: 0.7, delay: 0.4 },
+            y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+          }}
+          className="relative w-full max-w-md mx-auto lg:ml-auto lg:mr-0 aspect-[4/5]"
         >
-          <Image 
-            src="/profile.jpg" 
-            alt="Ken Besa" 
-            fill 
-            className="object-cover"
-            priority 
-          />
+          <div className="absolute -inset-4 bg-gradient-to-tr from-indigo-500/20 to-cyan-500/20 rounded-3xl blur-xl opacity-50" />
+          <div className="absolute inset-0 border border-white/10 rounded-3xl translate-x-4 translate-y-4 z-0" />
+          
+          {/* Main Image Container */}
+          <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 bg-background z-10 shadow-2xl">
+            <Image 
+              src="/profile.jpg" 
+              alt="Ken Besa" 
+              fill 
+              className="object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
+              priority 
+            />
+          </div>
         </motion.div>
 
       </div>
     </section>
   );
-}
+} 
