@@ -59,7 +59,7 @@ export default function Projects() {
     : projectsData.filter(project => project.category === filter);
 
   return (
-    <section id="projects" className="py-24 px-6 relative z-10 bg-white/[0.01] border-y border-white/5">
+    <section id="experience" className="py-24 px-6 relative z-10">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <motion.div
