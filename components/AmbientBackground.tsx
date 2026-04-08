@@ -36,10 +36,9 @@ export default function Background() {
             linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
           `,
           backgroundSize: '4rem 4rem',
-          // Fades the grid out at the edges of the screen so it isn't harsh
           maskImage: 'radial-gradient(circle at center, black 30%, transparent 80%)',
           WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 80%)',
-          // Slowly pans the grid diagonally
+
           animation: 'grid-pan 20s linear infinite'
         }}
       />
