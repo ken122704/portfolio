@@ -35,7 +35,7 @@ export default function Experience() {
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             <span className="text-foreground">Experience & </span>
-            <span className="bg-gradient-to-r from-white to-brand bg-clip-text text-transparent">Education</span>
+            <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Education</span>
           </h2>
         </motion.div>
 
@@ -61,7 +61,7 @@ export default function Experience() {
                 </span>
               </div>
               <h4 className="text-lg text-foreground/80 font-medium mb-4">{exp.organization}</h4>
-              <p className="text-foreground/60 leading-relaxed max-w-2xl">
+              <p className=" text-neutral-400 leading-relaxed max-w-2xl">
                 {exp.description}
               </p>
             </motion.div>

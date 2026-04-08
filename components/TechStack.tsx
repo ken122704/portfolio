@@ -8,7 +8,7 @@ import {
   SiGit, SiDocker, 
 } from "react-icons/si";
 
-// We store the exact brand hex colors to use on hover
+// We store the exact brand hex colors to use
 const techCategories = [
   {
     title: "FRONTEND",
@@ -18,17 +18,12 @@ const techCategories = [
       { name: "React", icon: SiReact, color: "#61DAFB" },
       { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-      { name: "GSAP", icon: SiGreensock, color: "#88CE02" },
-      { name: "Flutter", icon: SiFlutter, color: "#02569B" },
-      { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
     ]
   },
   {
     title: "BACKEND",
     skills: [
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-      { name: "Python", icon: SiPython, color: "#3776AB" },
-      { name: "Django", icon: SiDjango, color: "#092E20" },
       { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
     ]
   },
@@ -44,7 +39,6 @@ const techCategories = [
     title: "TOOLS",
     skills: [
       { name: "Git", icon: SiGit, color: "#F05032" },
-      { name: "Docker", icon: SiDocker, color: "#2496ED" },
     ]
   }
 ];
@@ -62,7 +56,7 @@ export default function TechStack() {
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             <span className="text-foreground">My </span>
-            <span className="bg-gradient-to-r from-white to-brand bg-clip-text text-transparent">Tech Stack</span>
+            <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Tech Stack</span>
           </h2>
         </motion.div>
 
@@ -88,16 +82,15 @@ export default function TechStack() {
                 {category.skills.map((tech, i) => (
                   <div 
                     key={i} 
-                    // The 'group' class is the magic that links the hover state of the box to the icon inside
                     className="group relative flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 transition-all duration-300 hover:-translate-y-1 cursor-default shadow-lg hover:shadow-xl"
-                    style={{ '--hover-color': tech.color } as React.CSSProperties}
+                    style={{ '--brand-color': tech.color } as React.CSSProperties}
                   >
                     <tech.icon 
                       size={24} 
-                      // Text starts gray, and on group-hover, dynamically switches to the CSS variable color
-                      className="text-foreground/40 transition-colors duration-300 group-hover:text-[var(--hover-color)]"
+                      // Removed the gray text default, now it is permanently the brand color
+                      className="text-[var(--brand-color)] transition-transform duration-300 group-hover:scale-110"
                     />
-                    <span className="text-sm font-medium text-foreground/70 group-hover:text-white transition-colors duration-300">
+                    <span className="text-sm font-medium text-neutral-400 group-hover:text-white transition-colors duration-300">
                       {tech.name}
                     </span>
                   </div>

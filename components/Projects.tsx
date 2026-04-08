@@ -69,9 +69,9 @@ export default function Projects() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-              <span className="text-foreground">Featured </span>
-              <span className="bg-gradient-to-r from-white to-brand bg-clip-text text-transparent">Projects</span>
-            </h2>
+            <span className="text-foreground">Featured </span>
+            <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
+          </h2>
           </motion.div>
 
           {/* Filter Buttons */}
@@ -125,13 +125,13 @@ export default function Projects() {
                 </div>
                 
                 <h3 className="text-2xl font-bold text-foreground mb-3">{project.title}</h3>
-                <p className="text-foreground/60 leading-relaxed flex-grow mb-6">
+                <p className="text-neutral-400 leading-relaxed flex-grow mb-6">
                   {project.description}
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mt-auto pt-6 border-t border-white/10">
                   {project.tech.map((t, i) => (
-                    <span key={i} className="text-xs font-medium text-brand">
+                    <span key={i} className="text-xs font-medium text-brand text-neutral-400">
                       {t} {i !== project.tech.length - 1 && "•"}
                     </span>
                   ))}

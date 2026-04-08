@@ -14,8 +14,9 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4 inline-block">
-            About Me
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+            <span className="text-foreground">About </span>
+            <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Me</span>
           </h2>
           <div className="w-20 h-1 bg-brand rounded-full"></div>
         </motion.div>

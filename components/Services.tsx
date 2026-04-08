@@ -34,9 +34,9 @@ export default function Services() {
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             <span className="text-foreground">My </span>
-            <span className="bg-gradient-to-r from-brand to-cyan-400 bg-clip-text text-transparent">Services</span>
+            <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
           </h2>
-          <p className="text-foreground/60 max-w-2xl mx-auto text-lg">
+          <p className=" text-neutral-400 max-w-2xl mx-auto text-lg">
             Bridging the gap between modern web architecture and cutting-edge artificial intelligence to deliver complete digital solutions.
           </p>
         </motion.div>
@@ -59,7 +59,7 @@ export default function Services() {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
-                <p className="text-foreground/60 leading-relaxed">
+                <p className=" text-neutral-400 leading-relaxed">
                   {service.description}
                 </p>
               </div>

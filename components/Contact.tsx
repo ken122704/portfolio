@@ -18,12 +18,11 @@ export default function Contact() {
             className="flex flex-col justify-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
-              <span className="text-foreground">Let&apos;s build something </span>
-              <br />
-              <span className="bg-gradient-to-r from-white to-brand bg-clip-text text-transparent">amazing together.</span>
+              <span className="text-foreground">Let&apos;s work </span>
+              <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent"> together.</span>
             </h2>
             
-            <p className="text-foreground/60 text-lg mb-10 max-w-md leading-relaxed">
+            <p className="text-neutral-400 text-lg mb-10 max-w-md leading-relaxed">
               Whether you need a full-stack web application built from scratch or intelligent workflows automated to save you time, I am ready to help scale your ideas.
             </p>
 

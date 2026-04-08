@@ -25,7 +25,7 @@ export default function Certifications() {
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             <span className="text-foreground">Licenses & </span>
-            <span className="bg-gradient-to-r from-white to-brand bg-clip-text text-transparent">Certifications</span>
+            <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Certifications</span>
           </h2>
         </motion.div>
 
@@ -45,9 +45,9 @@ export default function Certifications() {
               
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-2">{cert.name}</h3>
-                <p className="text-foreground/70 font-medium">{cert.issuer}</p>
+                <p className="text-neutral-400 font-medium">{cert.issuer}</p>
                 <div className="flex items-center gap-4 mt-4 text-sm">
-                  <span className="text-foreground/50">Issued: {cert.date}</span>
+                  <span className="text-neutral-400">Issued: {cert.date}</span>
                   <span className="px-3 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded-full font-medium">
                     {cert.status}
                   </span>

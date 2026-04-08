@@ -38,13 +38,6 @@ export default function Hero() {
       id="home" 
       className="relative min-h-screen flex items-center pt-20 pb-20 px-6 overflow-hidden"
     >
-      {/* Dynamic Interactive Background Glow */}
-      <div 
-        className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300" 
-        style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.12), transparent 80%)`
-        }}
-      />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
         
