@@ -50,7 +50,7 @@ export default function TechStack() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.5 }}
           className="mb-20 text-center"
         >
@@ -66,7 +66,7 @@ export default function TechStack() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: false, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex flex-col md:flex-row gap-8 md:gap-16 items-start border-b border-white/5 pb-16 last:border-0"
             >

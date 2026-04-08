@@ -65,7 +65,7 @@ export default function Projects() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
@@ -78,7 +78,7 @@ export default function Projects() {
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="flex gap-3 overflow-x-auto pb-2 md:pb-0"
           >
             {filters.map((f) => (
