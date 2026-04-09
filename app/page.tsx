@@ -21,8 +21,8 @@ export default function Home() {
       <Services />
       <Experience />
       <TechStack />
-      <Projects />
       <Certifications />
+      <Projects />
       <Contact />
       <Footer />
     </div>

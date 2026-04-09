@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import { 
   SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiGreensock, SiFlutter, SiBootstrap,
-  SiNodedotjs, SiPython, SiDjango, SiExpress,
+  SiNodedotjs, SiExpress,
   SiMysql, SiPostgresql, SiMongodb,
-  SiGit, SiDocker, 
+  SiGit,
 } from "react-icons/si";
 
 // We store the exact brand hex colors to use

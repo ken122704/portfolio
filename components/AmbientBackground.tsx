@@ -1,21 +1,43 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-// We generate the snowflakes OUTSIDE the component to prevent 
-// React's "impure function" and hydration errors.
-const snowflakes = Array.from({ length: 75 }).map((_, i) => ({
-  id: i,
-  left: `${Math.random() * 150 - 50}%`, 
-  animationDuration: `${Math.random() * 10 + 10}s`, 
-  animationDelay: `-${Math.random() * 20}s`, 
-  opacity: Math.random() * 0.4 + 0.1, 
-  size: `${Math.random() * 4 + 2}px`,
-  // 50% chance to be cyan or blue
-  isCyan: Math.random() > 0.5 
-}));
+// 1. Define the Snowflake type so TypeScript stays happy
+interface Snowflake {
+  id: number;
+  left: string;
+  animationDuration: string;
+  animationDelay: string;
+  opacity: number;
+  size: string;
+  isCyan: boolean;
+}
 
 export default function Background() {
+  // 2. Start empty. The server renders nothing but the grid.
+  const [snowflakes, setSnowflakes] = useState<Snowflake[]>([]);
+
+  useEffect(() => {
+    // 3. Defer the math and state update to the next event loop tick.
+    // This makes it explicitly ASYNCHRONOUS, bypassing the React 19 linter warning!
+    const timer = setTimeout(() => {
+      const generatedFlakes = Array.from({ length: 75 }).map((_, i) => ({
+        id: i,
+        left: `${Math.random() * 150 - 50}%`, 
+        animationDuration: `${Math.random() * 10 + 10}s`, 
+        animationDelay: `-${Math.random() * 20}s`, 
+        opacity: Math.random() * 0.4 + 0.1, 
+        size: `${Math.random() * 4 + 2}px`,
+        isCyan: Math.random() > 0.5 
+      }));
+      
+      setSnowflakes(generatedFlakes);
+    }, 0);
+
+    // Cleanup the timer just in case the component unmounts quickly
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="fixed inset-0 z-0 overflow-hidden bg-neutral-950 pointer-events-none">
       {/* Subtle Noise Texture */}
@@ -26,11 +48,10 @@ export default function Background() {
         }}
       />
       
-      {/* NEW: Animated Cyber-Grid Matrix */}
+      {/* Animated Cyber-Grid Matrix */}
       <div 
         className="absolute inset-0 z-0 opacity-40"
         style={{
-          // Creates the grid lines using your brand colors
           backgroundImage: `
             linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
@@ -38,7 +59,6 @@ export default function Background() {
           backgroundSize: '4rem 4rem',
           maskImage: 'radial-gradient(circle at center, black 30%, transparent 80%)',
           WebkitMaskImage: 'radial-gradient(circle at center, black 30%, transparent 80%)',
-
           animation: 'grid-pan 20s linear infinite'
         }}
       />
@@ -70,7 +90,6 @@ export default function Background() {
         
         @keyframes grid-pan {
           0% { background-position: 0 0; }
-          /* 4rem matches the backgroundSize exactly, creating a seamless infinite loop */
           100% { background-position: 4rem 4rem; } 
         }
       `}</style>

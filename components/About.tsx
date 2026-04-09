@@ -72,7 +72,7 @@ export default function About() {
                 <div>
                   <p className="font-medium text-neutral-400 ">Education</p>
                   <p className="text-sm text-neutral-400 ">USTP (B.S. Computer Science)</p>
-                  <p className="text-xs text-neutral-400 ">2023 – 2027</p>
+                  <p className="text-xs text-neutral-400 ">2023 – Present</p>
                 </div>
               </div>
 
@@ -81,6 +81,7 @@ export default function About() {
                 <div>
                   <p className="font-medium text-neutral-400 ">Experience</p>
                   <p className="text-sm text-neutral-400 ">4 Years (Data Annotation)</p>
+                  <p className="text-sm text-neutral-400 ">Mar - Dec 2025 (Web Developer - USTP Registrar)</p>
                 </div>
               </div>
 

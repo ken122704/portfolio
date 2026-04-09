@@ -12,11 +12,21 @@ const experiences = [
     description: "Precisely annotated complex 3D LiDAR datasets, segmenting and classifying objects such as vehicles, pedestrians, and traffic signals to provide high-quality training data for autonomous driving systems.",
     icon: <Briefcase size={20} className="text-brand" />,
   },
+
+  {
+    type: "work",
+    title: "Web Developer (Part-Time)",
+    organization: "USTP Registrar",
+    date: "Mar – Dec 2025",
+    description: "Engineered the frontend for an automated digital system, optimizing the process for student document requests.",
+    icon: <Briefcase size={20} className="text-brand" />,
+  },
+
   {
     type: "education",
     title: "B.S. Computer Science",
-    organization: "University of Science and Technology of Southern Philippines",
-    date: "2023 – 2027",
+    organization: "University of Science and Technology of Southern Philippines - USTP",
+    date: "2023 – Present",
     description: "Focusing on core computer science principles, full-stack development, and algorithmic optimization. Developing technical foundation alongside hands-on automated workflow and software projects.",
     icon: <GraduationCap size={20} className="text-cyan-400" />,
   },
