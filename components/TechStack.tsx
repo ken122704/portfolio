@@ -2,13 +2,12 @@
 
 import { motion } from "framer-motion";
 import { 
-  SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiGreensock, SiFlutter, SiBootstrap,
-  SiNodedotjs, SiExpress,
+  SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss,
+  SiNodedotjs, SiExpress, SiFirebase, SiSupabase,
   SiMysql, SiPostgresql, SiMongodb,
   SiGit,
 } from "react-icons/si";
 
-// We store the exact brand hex colors to use
 const techCategories = [
   {
     title: "FRONTEND",
@@ -25,6 +24,8 @@ const techCategories = [
     skills: [
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
+      { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+      { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
     ]
   },
   {
@@ -39,6 +40,10 @@ const techCategories = [
     title: "TOOLS",
     skills: [
       { name: "Git", icon: SiGit, color: "#F05032" },
+      { name: "n8n", icon: "https://cdn.simpleicons.org/n8n/EA4343", color: "#EA4343" },
+      { name: "Make", icon: "https://cdn.simpleicons.org/make/FFFFFF", color: "#6132D5" },
+      { name: "Zapier", icon: "https://cdn.simpleicons.org/zapier/FF4A00", color: "#FF4A00" },
+      { name: "GoHighLevel", icon: "/ghl.png", color: "#000000"  },
     ]
   }
 ];
@@ -85,11 +90,20 @@ export default function TechStack() {
                     className="group relative flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 transition-all duration-300 hover:-translate-y-1 cursor-default shadow-lg hover:shadow-xl"
                     style={{ '--brand-color': tech.color } as React.CSSProperties}
                   >
-                    <tech.icon 
-                      size={24} 
-                      // Removed the gray text default, now it is permanently the brand color
-                      className="text-[var(--brand-color)] transition-transform duration-300 group-hover:scale-110"
-                    />
+                    {/* THIS IS THE FIX: Checks if icon is a string URL or a React Component */}
+                    {typeof tech.icon === 'string' ? (
+                      <img 
+                        src={tech.icon} 
+                        alt={tech.name} 
+                        className="w-6 h-6 object-contain transition-transform duration-300 group-hover:scale-110"
+                      />
+                    ) : (
+                      <tech.icon 
+                        size={24} 
+                        className="text-[var(--brand-color)] transition-transform duration-300 group-hover:scale-110"
+                      />
+                    )}
+                    
                     <span className="text-sm font-medium text-neutral-400 group-hover:text-white transition-colors duration-300">
                       {tech.name}
                     </span>

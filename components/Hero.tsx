@@ -7,12 +7,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
-  // State to track mouse position for the dynamic glow
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // e.clientX and e.clientY track the cursor relative to the screen (so it works while scrolling)
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
