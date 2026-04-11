@@ -31,18 +31,13 @@ export default function About() {
             className="md:col-span-2 space-y-6 text-neutral-400  leading-relaxed text-lg"
           >
             <p>
-              My journey in tech started at the foundational layer of AI. For four years, I worked as a Data Annotator, 
-              precisely segmenting complex 3D LiDAR datasets to train autonomous driving systems. This hands-on experience 
-              with raw data gave me a deep appreciation for how artificial intelligence actually learns and functions.
+              I&apos;m a Computer Science Undergarduate, Full-Stack Web Developer, and AI Automation Specialist with a strong foundation in AI systems.
             </p>
             <p>
-              Today, I am a 3rd-year Computer Science student applying that knowledge to build robust, production-ready applications. 
-              I don&apos;t just write code; I design systems. Whether it&apos;s a full-stack React platform or an intricate n8n/Zapier 
-              workflow that automates an entire business process, I focus on solving real-world problems efficiently.
+              I started in the data layer of AI, working for 3 years as a Data Annotator on 3D LiDAR datasets for autonomous driving—building a practical understanding of how AI models learn from real-world data.
             </p>
             <p>
-              When I&apos;m not studying or coding, I&apos;m exploring new ways to integrate AI into everyday workflows to make technology 
-              work harder for us, not the other way around.
+             Now, I focus on building scalable, production-ready solutions. From full-stack applications to automation workflows using tools like n8n and Zapier, I design systems that solve real-world problems efficiently.
             </p>
           </motion.div>
 
@@ -80,7 +75,7 @@ export default function About() {
                 <Briefcase className="text-brand shrink-0 mt-1" size={20} />
                 <div>
                   <p className="font-medium text-neutral-400 ">Experience</p>
-                  <p className="text-sm text-neutral-400 ">4 Years (Data Annotation)</p>
+                  <p className="text-sm text-neutral-400 ">3 Years (Data Annotation)</p>
                   <p className="text-sm text-neutral-400 ">Mar - Dec 2025 (Web Developer - USTP Registrar)</p>
                 </div>
               </div>
