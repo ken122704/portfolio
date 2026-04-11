@@ -12,26 +12,42 @@ export default function Certifications() {
 
   const certifications = [
     {
-      title: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      date: "2024",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop"
+      title: "TOPCIT Level 3",
+      issuer: "TOPCIT (Korea)",
+      date: "2025",
+      description: "Validated practical competency in IT business, software development, and modern computing fundamentals.",
+      image: "/topcit.jpg"
     },
     {
-      title: "Google Data Analytics Professional",
-      issuer: "Coursera / Google",
-      date: "2023",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+      title: "AI Automation with n8n",
+      issuer: "Technical Virtual Assistant",
+      date: "2026",
+      description: "Mastered building complex, multi-step workflow automations, webhooks, and custom integrations using n8n.",
+      image: "/n8n-cert.png"
     },
     {
-      title: "Advanced React Patterns",
-      issuer: "Frontend Masters",
-      date: "2023",
-      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600&auto=format&fit=crop"
+      title: "AI Automation with Zapier",
+      issuer: "Technical Virtual Assistant",
+      date: "2026",
+      description: "Demonstrated proficiency in connecting web applications and automating repetitive business tasks with Zapier.",
+      image: "/zapier-cert.png"
+    },
+    {
+      title: "AI Automation with Make",
+      issuer: "Technical Virtual Assistant",
+      date: "2026",
+      description: "Certified in designing advanced visual automation pipelines and managing complex data routing in Make.",
+      image: "/make-cert.png"
+    },
+    {
+      title: "Go High Level",
+      issuer: "Technical Virtual Assistant",
+      date: "2026",
+      description: "Proven expertise in building CRM automations, sales funnels, and marketing workflows using Go High Level.",
+      image: "/ghl-cert.png"
     }
   ];
 
-  // NEW: Calculate which card is in the center of the screen when swiping
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const target = e.target as HTMLDivElement;
     const scrollProgress = target.scrollLeft / (target.scrollWidth - target.clientWidth || 1);
@@ -39,7 +55,6 @@ export default function Certifications() {
     setActiveIndex(newIndex);
   };
 
-  // NEW: Scroll exactly to a specific card when a dot is clicked
   const scrollTo = (index: number) => {
     if (!scrollRef.current) return;
     const child = scrollRef.current.children[index] as HTMLElement;
@@ -64,12 +79,12 @@ export default function Certifications() {
         
         <div className="text-center mb-16">
           <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-20 text-center"
-        >
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="mb-20 text-center"
+          >
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
               Licenses & <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Certifications</span>
             </h2>
@@ -120,8 +135,17 @@ export default function Certifications() {
                 </div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-white mb-2 line-clamp-1">{cert.title}</h3>
-                <p className="text-neutral-400 mb-4 line-clamp-2">{cert.issuer}</p>
+                {/* Title */}
+                <h3 className="text-xl font-bold text-white mb-1 line-clamp-1">{cert.title}</h3>
+                
+                {/* Issuer styled as a cyan subtitle to separate it from the description */}
+                <p className="text-xs font-medium text-cyan-400 mb-3">{cert.issuer}</p>
+                
+                {/* Description added with strict clamping to prevent box stretching */}
+                <p className="text-sm text-neutral-400 mb-4 line-clamp-2 min-h-[2.5rem]">
+                  {cert.description}
+                </p>
+
                 <div className="mt-auto">
                   <span className="text-xs font-medium text-neutral-400 bg-cyan-500/10 px-3 py-1.5 rounded-full whitespace-nowrap">
                     Issued {cert.date}
@@ -132,7 +156,7 @@ export default function Certifications() {
           ))}
         </div>
 
-        {/* NEW: Dot Indicators */}
+        {/* Dot Indicators */}
         <div className="flex justify-center gap-2 mt-4 mb-16">
           {certifications.map((_, idx) => (
             <button
