@@ -79,12 +79,15 @@ export default function Projects() {
 
   // Added link placeholders here too, in case you have repos/videos to link for your automations
   const aiProjects: Project[] = [
-    { title: "AI Voice Receptionist", description: "Conversational AI system handling inbound/outbound calls.", tool: "n8n", image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?q=80&w=600&auto=format&fit=crop", githubLink: "https://github.com/yourusername/ai-voice", liveLink: "" },
-    { title: "AI Facebook Chatbot", description: "Automated customer service and lead generation bot.", tool: "n8n", image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop", githubLink: "", liveLink: "" },
-    { title: "AI Video Generator", description: "Pipeline creating and cross-posting videos automatically.", tool: "n8n", image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=600&auto=format&fit=crop", githubLink: "", liveLink: "" },
-    { title: "AI Jobs Scraper", description: "Scrapes job boards and uses AI to filter opportunities.", tool: "n8n", image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=600&auto=format&fit=crop", githubLink: "", liveLink: "" },
-    { title: "Video-to-Social Content", description: "Repurposes long-form video into social media shorts.", tool: "Zapier", image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop", githubLink: "", liveLink: "" },
-    { title: "Asana CRM Automation", description: "Syncs leads and automates task creation for sales teams.", tool: "Zapier", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop", githubLink: "", liveLink: "" }
+    { title: "AI Voice Receptionist", description: "Conversational AI system handling inbound/outbound calls.", tool: "n8n", image: "AI Voice Receptionist.png" },
+    { title: "AI Facebook Chatbot", description: "Automated customer service and lead generation bot.", tool: "n8n", image: "AI Facebook Chatbot.png"},
+    { title: "AI ASMR Video Generator", description: "Pipeline creating and cross-posting videos automatically.", tool: "n8n", image: "AI ASMR Generator.png" },
+    { title: "AI Jobs Scraper", description: "Scrapes job boards and uses AI to filter opportunities.", tool: "n8n", image: "AI Jobs Scraper + Resume Optimizer.png"},
+    { title: "Video-to-Social Content", description: "Repurposes long-form video into social media shorts.", tool: "Zapier", image: "AI-Powered Video-to-Social Content Automation.png", },
+    { title: "Asana CRM Automation", description: "Syncs leads and automates task creation for sales teams.", tool: "Zapier", image: "AI-Powered Asana CRM Automation.png"},
+    { title: "Automated Leads Enrichment Automation", description: "An end-to-end lead enrichment, prioritization, and outreach automation. Designed to help sales teams process incoming leads in real time and respond faster to high-value opportunities.", tool: "Zapier", image: "Automated Leads Enrichment.png"},
+    { title: "Automated Financial Reporting: Xero-to-Asana Ledger Integration", description: "Automates the creation of financial reports by syncing data between Xero and Asana.", tool: "Make", image: "Automated Financial Reporting Xero-to-Asana Ledger Integration.png" },
+    { title: "AI-Powered Gmail Attachment Organizer", description: "Automates the organization of Gmail attachments using AI.", tool: "Make", image: "AI-Powered Gmail Attachment Organizer.png" }
   ];
 
   return (
