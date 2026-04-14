@@ -35,7 +35,7 @@ export default function Certifications() {
       issuer: "TOPCIT (Korea)",
       date: "2025",
       description: "Validated practical competency in IT business, software development, and modern computing fundamentals.",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop"
+      image: "/topcit.jpg"
     },
     {
       title: "AI Automation with n8n",
