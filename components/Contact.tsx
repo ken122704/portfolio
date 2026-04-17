@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send, Phone } from "lucide-react";
+import { Mail, MapPin, Send, Phone,} from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_tm47p1p";
@@ -94,6 +95,23 @@ export default function Contact() {
                 <p className="text-base text-foreground font-bold mb-1">Email</p>
                 <a href="mailto:kencharlesbesa27@gmail.com" className="text-neutral-400 text-sm hover:text-cyan-400 transition-colors">
                   kencharlesbesa27@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-5">
+              <div className="w-12 h-12 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-center shrink-0">
+                <FaLinkedin className="text-neutral-400" size={20} />
+              </div>
+              <div>
+                <p className="text-base text-foreground font-bold mb-1">LinkedIn</p>
+                <a 
+                  href="https://www.linkedin.com/in/besa-ken-charles-527154243/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-neutral-400 text-sm hover:text-cyan-400 transition-colors"
+                >
+                  Besa Ken Charles 
                 </a>
               </div>
             </div>

@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap } from "lucide-react";
+import { Briefcase, GraduationCap, BoxSelect, Code2 } from "lucide-react";
 
 const experiences = [
   {
     type: "work",
     title: "Data Annotator",
     organization: "Remotask",
-    date: "2021 – 2025",
-    description: "Precisely annotated complex 3D LiDAR datasets, segmenting and classifying objects such as vehicles, pedestrians, and traffic signals to provide high-quality training data for autonomous driving systems.",
-    icon: <Briefcase size={20} className="text-brand" />,
+    date: "2020 – 2025",
+    description: "Precisely annotated complex 3D LiDAR datasets, segmenting and classifying objects such as vehicles, pedestrians, and traffic signals to provide high-quality training data for autonomous driving systems. Worked across multiple engagements (Jun–Dec 2020, May–Sep 2024, Nov-Dec 2025).",
+    icon: <BoxSelect size={20} className="text-cyan-400" />,
   },
 
   {
@@ -19,7 +19,7 @@ const experiences = [
     organization: "USTP Registrar",
     date: "Mar – Dec 2025",
     description: "Engineered the frontend for an automated digital system, optimizing the process for student document requests.",
-    icon: <Briefcase size={20} className="text-brand" />,
+    icon: <Code2 size={20} className="text-cyan-400" />,
   },
 
   {
@@ -27,7 +27,7 @@ const experiences = [
     title: "B.S. Computer Science",
     organization: "University of Science and Technology of Southern Philippines - USTP",
     date: "2023 – Present",
-    description: "Focusing on core computer science principles, full-stack development, and algorithmic optimization. Developing technical foundation alongside hands-on automated workflow and software projects.",
+    description: "I'm currently pursuing my B.S. in Computer Science at the University of Science and Technology of Southern Philippines.",
     icon: <GraduationCap size={20} className="text-cyan-400" />,
   },
 ];
