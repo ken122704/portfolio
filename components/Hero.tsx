@@ -85,16 +85,9 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           >
             <Link 
-              href="#projects"
-              className="flex items-center gap-2 px-6 py-3.5 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto justify-center"
-            >
-              View My Work
-              <ArrowRight size={18} />
-            </Link>
-            <Link 
               href="/resume.pdf"
               download="Ken_Besa_Resume.pdf"
-              className="flex items-center gap-2 px-6 py-3.5 bg-transparent text-white border border-white/20 rounded-full font-semibold hover:bg-white/10 transition-colors w-full sm:w-auto justify-center"
+              className="flex items-center gap-2 px-6 py-3.5 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto justify-center"
             >
               <ArrowDown size={18} />
               Download Resume
