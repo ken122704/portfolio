@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, ArrowDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -92,11 +92,12 @@ export default function Hero() {
               <ArrowRight size={18} />
             </Link>
             <Link 
-              href="#contact"
+              href="/resume.pdf"
+              download="Ken_Besa_Resume.pdf"
               className="flex items-center gap-2 px-6 py-3.5 bg-transparent text-white border border-white/20 rounded-full font-semibold hover:bg-white/10 transition-colors w-full sm:w-auto justify-center"
             >
-              <Mail size={18} />
-              Contact Me
+              <ArrowDown size={18} />
+              Download Resume
             </Link>
           </motion.div>
         </motion.div>

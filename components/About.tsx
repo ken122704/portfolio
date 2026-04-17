@@ -31,10 +31,10 @@ export default function About() {
             className="md:col-span-2 space-y-6 text-neutral-400  leading-relaxed text-lg"
           >
             <p>
-              I&apos;m a Computer Science Undergarduate, Full-Stack Web Developer, and AI Automation Specialist with a strong foundation in AI systems.
+              I&apos;m currently pursuing my B.S. in Computer Science at the University of Science and Technology of Southern Philippines (2023–Present), Full-Stack Web Developer, and AI Automation Specialist with a strong foundation in AI systems.
             </p>
             <p>
-              I started in the data layer of AI, working for 3 years as a Data Annotator on 3D LiDAR datasets for autonomous driving—building a practical understanding of how AI models learn from real-world data.
+              I started in the data layer of AI, working for 1+ year as a Data Annotator on 3D LiDAR datasets for autonomous driving—building a practical understanding of how AI models learn from real-world data.
             </p>
             <p>
              Now, I focus on building scalable, production-ready solutions. From full-stack applications to automation workflows using tools like n8n and Zapier, I design systems that solve real-world problems efficiently.
@@ -75,7 +75,7 @@ export default function About() {
                 <Briefcase className="text-brand shrink-0 mt-1" size={20} />
                 <div>
                   <p className="font-medium text-neutral-400 ">Experience</p>
-                  <p className="text-sm text-neutral-400 ">3 Years (Data Annotation)</p>
+                  <p className="text-sm text-neutral-400 ">1+ Year (Data Annotation)</p>
                   <p className="text-sm text-neutral-400 ">Mar - Dec 2025 (Web Developer - USTP Registrar)</p>
                 </div>
               </div>
@@ -84,7 +84,7 @@ export default function About() {
                 <Code2 className="text-brand shrink-0 mt-1" size={20} />
                 <div>
                   <p className="font-medium text-neutral-400 ">Focus</p>
-                  <p className="text-sm text-neutral-400 ">Full-Stack & Automations</p>
+                  <p className="text-sm text-neutral-400 ">Full-Stack Web Dev & AI Automations</p>
                 </div>
               </div>
             </div>
