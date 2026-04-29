@@ -57,6 +57,13 @@ export default function Certifications() {
       date: "2026",
       description: "Certified in designing advanced visual automation pipelines and managing complex data routing in Make.",
       image: "/make-cert.png"
+    },
+    {
+      title: "Prompt Engineering",
+      issuer: "Technical Virtual Assistant",
+      date: "2026",
+      description: "Certified in designing effective prompts for AI models and optimizing their performance.",
+      image: "/prompt-engineering-cert.png"
     }
   ];
 

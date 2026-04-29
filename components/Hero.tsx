@@ -67,7 +67,7 @@ export default function Hero() {
           
           <motion.h2 
             variants={itemVariants}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 text-cyan-600"
           >
             Full-Stack Web Developer &<br className="hidden md:block" /> AI Automation Specialist.
           </motion.h2>
