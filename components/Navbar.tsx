@@ -8,6 +8,7 @@ const navLinks = [
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
   { name: "Experience", href: "#experience" },
+  { name: "Tech Stack", href: "#techstack" },
   { name: "Certifications", href: "#certifications" },
   { name: "Projects", href: "#projects" },
 ];
@@ -119,7 +120,6 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  // Override default click with our custom scroll handler
                   onClick={(e) => handleNavClick(e, link.href)}
                   className="text-lg font-medium text-neutral-300 hover:text-white transition-colors"
                 >
