@@ -43,7 +43,8 @@ export default function Hero() {
         <motion.div 
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible" 
+          viewport={{ once: false, amount: 0.2 }} 
           className="flex flex-col items-start text-left"
         >
           {/* Availability Badge */}
@@ -67,7 +68,7 @@ export default function Hero() {
           
           <motion.h2 
             variants={itemVariants}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 text-cyan-600"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
           >
             Full-Stack Web Developer &<br className="hidden md:block" /> AI Automation Specialist.
           </motion.h2>
@@ -98,7 +99,8 @@ export default function Hero() {
         {/* RIGHT COLUMN: Image */}
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0, y: [0, -15, 0] }}
+          whileInView={{ opacity: 1, x: 0, y: [0, -15, 0] }} 
+          viewport={{ once: false, amount: 0.3 }} 
           transition={{ 
             opacity: { duration: 0.7, delay: 0.4 },
             x: { duration: 0.7, delay: 0.4 },
@@ -124,4 +126,4 @@ export default function Hero() {
       </div>
     </section>
   );
-} 
+}

@@ -115,7 +115,7 @@ export default function Certifications() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="w-[85vw] sm:w-[350px] md:w-[400px] h-[420px] shrink-0 snap-center bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden hover:border-neutral-500/50 transition-colors group flex flex-col relative"
               >
                 {/* NEW: Clickable Image Area */}
