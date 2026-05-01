@@ -15,7 +15,7 @@ interface Project {
   tool?: string;
   githubLink?: string;
   liveLink?: string;
-  category?: string; // Used by the modal to style differently based on Web vs AI
+  category?: string; 
 }
 
 export default function Projects() {
@@ -70,10 +70,10 @@ export default function Projects() {
 
   // Replace the placeholder URLs with your actual GitHub and Web App links!
   const webProjects: Project[] = [
+    { title: "IRequest", description: "Developed key frontend components for a web app for online document request created for the USTP-CDO registrar.", tech: ["React", "JavaScript", "Django"], type: "Web App", image: "IRequest.png", githubLink: "https://github.com/pendonj14/iRequest", liveLink: "https://irequest-nu.vercel.app" },
+    { title: "Genesis", description: "Developed key frontend components for a comprehensive todo list and task management system.", tech: ["React", "TypeScript", "Django"], type: "Web App", image: "Genesis.png", githubLink: "https://github.com/towtu/genesis-frontend", liveLink: "https://genesis-woad.vercel.app" },
     { title: "ResuMake", description: "An ATS-optimized resume builder integrated with Gemini AI for generating professional bullet points.", tech: ["Next.js", "React", "TypeScript", "Supabase"], type: "Web App", image: "ResuMake.png", githubLink: "https://github.com/ken122704/ResuMake", liveLink: "https://resu-make-kappa.vercel.app" },
     { title: "Hanap", description: "A secure masterlist and role management system to centralize records efficiently.", tech: ["React", "JavaScript", "Firebase"], type: "Web App", image: "Hanap.png", githubLink: "https://github.com/ken122704/Hanap", liveLink: "https://hanap-9a95a.web.app/" },
-    { title: "Genesis", description: "Developed key frontend components for a comprehensive todo list and task management system.", tech: ["React", "TypeScript", "Django"], type: "Web App", image: "Genesis.png", githubLink: "https://github.com/towtu/genesis-frontend", liveLink: "https://genesis-woad.vercel.app" },
-    { title: "IRequest", description: "Developed key frontend components for a web app for online document request created for the USTP-CDO registrar.", tech: ["React", "JavaScript", "Django"], type: "Web App", image: "IRequest.png", githubLink: "https://github.com/pendonj14/iRequest", liveLink: "https://irequest-nu.vercel.app" },
     { title: "LocatR", description: "Developed key frontend components for a desktop application that manages student data and location tracking, featuring add, edit, delete, and search functionalities.", tech: ["Python", "CustomTkinter", "SQLite"], type: "Desktop App", image: "LocatR.png", githubLink: "https://github.com/wency01x/StudentRecordLocatorSystem", liveLink: "" },
   ];
 
