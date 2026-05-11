@@ -31,6 +31,13 @@ export default function Certifications() {
 
   const certifications = [
     {
+      title: "System-wide OJT Orientation 2026",
+      issuer: "USTP",
+      date: "2026",
+      description: "Completed comprehensive training on workplace safety, communication, and organizational culture for all USTP OJT participants.",
+      image: "/OJT.jpg"
+    },
+    {
       title: "TOPCIT Level 3",
       issuer: "TOPCIT (Korea)",
       date: "2025",
