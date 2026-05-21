@@ -6,6 +6,7 @@ import {
   SiNodedotjs, SiExpress, SiFirebase, SiSupabase,
   SiMysql, SiPostgresql, SiMongodb,
   SiGit,
+  SiPython,
 } from "react-icons/si";
 
 const techCategories = [
@@ -22,6 +23,7 @@ const techCategories = [
   {
     title: "BACKEND",
     skills: [
+      { name: "Python", icon: SiPython, color: "#3776AB" },
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
       { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },

@@ -82,7 +82,7 @@ export default function Projects() {
     { title: "AI Voice Receptionist", description: "Conversational AI system handling inbound/outbound calls.", tool: "n8n", image: "AI Voice Receptionist.png" },
     { title: "AI Facebook Chatbot", description: "Automated customer service and lead generation bot.", tool: "n8n", image: "AI Facebook Chatbot.png"},
     { title: "AI ASMR Video Generator", description: "Pipeline creating and cross-posting videos automatically.", tool: "n8n", image: "AI ASMR Generator.png" },
-    { title: "AI Jobs Scraper", description: "Scrapes job boards and uses AI to filter opportunities.", tool: "n8n", image: "AI Jobs Scraper + Resume Optimizer.png"},
+    { title: "AI Jobs Scraper", description: "Scrapes job boards and uses AI to filter opportunities.", tool: "n8n", image: "AI Jobs Scraper.png"},
     { title: "Video-to-Social Content", description: "Repurposes long-form video into social media shorts.", tool: "Zapier", image: "AI-Powered Video-to-Social Content Automation.png", },
     { title: "Asana CRM Automation", description: "Syncs leads and automates task creation for sales teams.", tool: "Zapier", image: "AI-Powered Asana CRM Automation.png"},
     { title: "Automated Leads Enrichment Automation", description: "An end-to-end lead enrichment, prioritization, and outreach automation. Designed to help sales teams process incoming leads in real time and respond faster to high-value opportunities.", tool: "Zapier", image: "Automated Leads Enrichment.png"},
