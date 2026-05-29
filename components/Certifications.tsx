@@ -44,6 +44,13 @@ export default function Certifications() {
       description: "Validated practical competency in IT business, software development, and modern computing fundamentals.",
       image: "/topcit.jpg"
     },
+     {
+      title: "GoHighLevel CRM Certification",
+      issuer: "Technical Virtual Assistant",
+      date: "2026",
+      description: "Certified in utilizing GoHighLevel for CRM management, marketing automation, and client relationship strategies.",
+      image: "/ghl-cert.png"
+    },
     {
       title: "AI Automation with n8n",
       issuer: "Technical Virtual Assistant",
