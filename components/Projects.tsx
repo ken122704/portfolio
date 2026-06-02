@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowDown, ExternalLink, Bot, ArrowRight, ChevronLeft, ChevronRight, Maximize, X } from 'lucide-react';
+import { ExternalLink, Bot, ArrowRight, ChevronLeft, ChevronRight, Maximize, X } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 
 // Strict typing to avoid TypeScript errors
@@ -12,7 +12,7 @@ interface Project {
   image: string;
   tech?: string[];
   type?: string;
-  tool?: string;
+  tool?: string[];
   githubLink?: string;
   liveLink?: string;
   category?: string; 
@@ -68,28 +68,135 @@ export default function Projects() {
     }
   };
 
-  // Replace the placeholder URLs with your actual GitHub and Web App links!
-  const webProjects: Project[] = [
-    { title: "IRequest", description: "Developed key frontend components for a web app for online document request created for the USTP-CDO registrar.", tech: ["React", "JavaScript", "Django"], type: "Web App", image: "IRequest.png", githubLink: "https://github.com/pendonj14/iRequest", liveLink: "https://irequest-nu.vercel.app" },
-    { title: "Genesis", description: "Developed key frontend components for a comprehensive todo list and task management system.", tech: ["React", "TypeScript", "Django"], type: "Web App", image: "Genesis.png", githubLink: "https://github.com/towtu/genesis-frontend", liveLink: "https://genesis-woad.vercel.app" },
-    { title: "PollView", description: "A Real Time Polling Application", tech: ["Next.js", "React", "TypeScript", "Supabase"], type: "Web App", image: "PollView.png", githubLink: "https://github.com/ken122704/PollView", liveLink: "https://poll-view-client.vercel.app/" },
-    { title: "ResuMake", description: "An ATS-optimized resume builder integrated with Gemini AI for generating professional bullet points.", tech: ["Next.js", "React", "TypeScript", "Supabase"], type: "Web App", image: "ResuMake.png", githubLink: "https://github.com/ken122704/ResuMake", liveLink: "https://resu-make-kappa.vercel.app" },
-    { title: "Hanap", description: "A secure masterlist and role management system to centralize records efficiently.", tech: ["React", "JavaScript", "Firebase"], type: "Web App", image: "Hanap.png", githubLink: "https://github.com/ken122704/Hanap", liveLink: "https://hanap-9a95a.web.app/" },
-    { title: "LocatR", description: "Developed key frontend components for a desktop application that manages student data and location tracking, featuring add, edit, delete, and search functionalities.", tech: ["Python", "CustomTkinter", "SQLite"], type: "Desktop App", image: "LocatR.png", githubLink: "https://github.com/wency01x/StudentRecordLocatorSystem", liveLink: "" },
-  ];
+const webProjects: Project[] = [
+  {
+    title: "IRequest",
+    description:
+      "Manual document requests cause slow processing and administrative bottlenecks. To solve this, a centralized React and Django web portal was built for the university registrar, streamlining operations, cutting backlog, and providing rapid access to records.",
+    tech: ["React", "JavaScript", "Django"],
+    type: "Web App",
+    image: "IRequest.png",
+    githubLink: "https://github.com/pendonj14/iRequest",
+    liveLink: "https://irequest-nu.vercel.app"
+  },
+  {
+    title: "ResuMake",
+    description:
+      "Job seekers spend hours formatting resumes to pass automated ATS filters. A Next.js web app integrating Gemini AI was developed to generate ATS-optimized bullet points, reducing formatting time from hours to minutes and boosting interview chances.",
+    tech: ["Next.js", "React", "TypeScript", "Supabase"],
+    type: "Web App",
+    image: "ResuMake.png",
+    githubLink: "https://github.com/ken122704/ResuMake",
+    liveLink: "https://resu-make-kappa.vercel.app"
+  },
+  {
+    title: "Hanap",
+    description:
+      "Organizations struggle with insecure record-keeping and inefficient role access. A secure masterlist and role management system was created using React and Firebase, centralizing user data and ensuring strict, efficient access control.",
+    tech: ["React", "JavaScript", "Firebase"],
+    type: "Web App",
+    image: "Hanap.png",
+    githubLink: "https://github.com/ken122704/Hanap",
+    liveLink: "https://hanap-9a95a.web.app/"
+  },
+  {
+    title: "PollView",
+    description:
+      "Gathering synchronized audience feedback often suffers from high-latency delays. A real-time polling app built with Next.js and Supabase enables concurrent voting, delivering zero-latency engagement and instant data visualization.",
+    tech: ["Next.js", "React", "TypeScript", "Supabase"],
+    type: "Web App",
+    image: "PollView.png",
+    githubLink: "https://github.com/ken122704/PollView",
+    liveLink: "https://poll-view-client.vercel.app/"
+  },
+  {
+    title: "Genesis",
+    description:
+      "Scattered workflows and disorganized tasks reduce personal and team productivity. A comprehensive task management frontend built with React and TypeScript was developed to provide a unified interface that streamlines daily task tracking.",
+    tech: ["React", "TypeScript", "Django"],
+    type: "Web App",
+    image: "Genesis.png",
+    githubLink: "https://github.com/towtu/genesis-frontend",
+    liveLink: "https://genesis-woad.vercel.app"
+  },
+  {
+    title: "LocatR",
+    description:
+      "Tracking student locations via traditional spreadsheets is slow and cumbersome. A Python desktop app with offline SQLite database management enables instant, offline retrieval of student location data.",
+    tech: ["Python", "CustomTkinter", "SQLite", "Pandas"],
+    type: "Desktop App",
+    image: "LocatR.png",
+    githubLink:
+      "https://github.com/wency01x/StudentRecordLocatorSystem",
+    liveLink: ""
+  }
+];
 
-  // Added link placeholders here too, in case you have repos/videos to link for your automations
-  const aiProjects: Project[] = [
-    { title: "AI Voice Receptionist", description: "Conversational AI system handling inbound/outbound calls.", tool: "n8n", image: "AI Voice Receptionist.png" },
-    { title: "AI Facebook Chatbot", description: "Automated customer service and lead generation bot.", tool: "n8n", image: "AI Facebook Chatbot.png"},
-    { title: "AI ASMR Video Generator", description: "Pipeline creating and cross-posting videos automatically.", tool: "n8n", image: "AI ASMR Generator.png" },
-    { title: "AI Jobs Scraper", description: "Scrapes job boards and uses AI to filter opportunities.", tool: "n8n", image: "AI Jobs Scraper.png"},
-    { title: "Video-to-Social Content", description: "Repurposes long-form video into social media shorts.", tool: "Zapier", image: "AI-Powered Video-to-Social Content Automation.png", },
-    { title: "Asana CRM Automation", description: "Syncs leads and automates task creation for sales teams.", tool: "Zapier", image: "AI-Powered Asana CRM Automation.png"},
-    { title: "Automated Leads Enrichment Automation", description: "An end-to-end lead enrichment, prioritization, and outreach automation. Designed to help sales teams process incoming leads in real time and respond faster to high-value opportunities.", tool: "Zapier", image: "Automated Leads Enrichment.png"},
-    { title: "Automated Financial Reporting: Xero-to-Asana Ledger Integration", description: "Automates the creation of financial reports by syncing data between Xero and Asana.", tool: "Make", image: "Automated Financial Reporting Xero-to-Asana Ledger Integration.png" },
-    { title: "AI-Powered Gmail Attachment Organizer", description: "Automates the organization of Gmail attachments using AI.", tool: "Make", image: "AI-Powered Gmail Attachment Organizer.png" }
-  ];
+const aiProjects: Project[] = [
+  {
+    title: "Automated Leads Enrichment",
+    description:
+      "Sales teams lose high-value prospects due to slow, manual lead processing. An end-to-end Zapier automation was built to capture, enrich, and prioritize leads, accelerating routing so sales can instantly engage high-value opportunities.",
+    tool: ["Zapier", "Apollo", "Slack", "Google Sheets", "Gmail"],
+    image: "Automated Leads Enrichment.png"
+  },
+  {
+    title: "AI Voice Receptionist",
+    description:
+      "Businesses miss critical calls during off-hours due to expensive 24/7 staffing requirements. A conversational AI voice agent built in n8n handles inbound and outbound calls, capturing 100% of phone leads round-the-clock while reducing operational costs.",
+    tool: ["n8n", "Google Calendar", "Airtable", "VAPI"],
+    image: "AI Voice Receptionist.png"
+  },
+  {
+    title: "Automated Financial Reporting",
+    description:
+      "Manually transferring accounting data to task managers is slow and error-prone. A secure Make pipeline syncing Xero financial ledgers directly into Asana eliminates manual entry errors and speeds up financial reporting.",
+    tool: ["Make", "Xero", "Asana", "Google Sheets"],
+    image: "Automated Financial Reporting Xero-to-Asana Ledger Integration.png"
+  },
+  {
+    title: "Asana CRM Automation",
+    description:
+      "Fragmented pipelines cause dropped leads when data is manually copied. A Zapier workflow was created to sync incoming leads and generate Asana tasks, ensuring zero leads slip through the cracks due to administrative oversight.",
+    tool: ["Zapier", "Asana", "Google Drive", "Gmail"],
+    image: "AI-Powered Asana CRM Automation.png"
+  },
+  {
+    title: "AI Facebook Chatbot",
+    description:
+      "Scaling social media support manually leads to delayed customer responses. An n8n chatbot was built to handle tier-1 support and capture Facebook leads, providing instant responses while freeing human agents for complex issues.",
+    tool: ["n8n", "Facebook Graph API", "Openrouter"],
+    image: "AI Facebook Chatbot.png"
+  },
+  {
+    title: "AI-Powered Gmail Attachment Organizer",
+    description:
+      "Professionals waste hours manually downloading and filing email attachments. A Make automation powered by AI routes and organizes incoming files, reclaiming weekly administrative time and creating a searchable digital filing system.",
+    tool: ["Make", "Gmail", "Google Drive", "Gemini AI", "Google Sheets"],
+    image: "AI-Powered Gmail Attachment Organizer.png"
+  },
+  {
+    title: "AI Jobs Scraper",
+    description:
+      "Job seekers spend hours manually filtering irrelevant job postings. An n8n scraper extracts and AI-scores listings, automating the job hunt by delivering curated and relevant opportunities.",
+    tool: ["n8n"],
+    image: "AI Jobs Scraper.png"
+  },
+  {
+    title: "Video-to-Social Content",
+    description:
+      "Repurposing long-form videos for social media requires tedious manual editing. A Zapier workflow automatically slices and formats videos into shorts, scaling content creation with minimal manual intervention.",
+    tool: ["Zapier", "AI by Zapier", "Facebook Graph API", "LinkedIn API"],
+    image: "AI-Powered Video-to-Social Content Automation.png"
+  },
+  {
+    title: "AI ASMR Video Generator",
+    description:
+      "Producing daily niche video content requires massive repetitive effort. An autonomous n8n pipeline generates, renders, and cross-posts videos, operating a fully automated media channel that replaces manual production.",
+    tool: ["n8n","Openrouter", "AI Video Generation API", "JWT Authentication", "YouTube API", "Facebook Graph API", ],
+    image: "AI ASMR Generator.png"
+  }
+];
 
   return (
     <>
@@ -104,7 +211,7 @@ export default function Projects() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
-                Featured <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
+                Featured <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Works</span> <span className="text-3xl md:text-5xl font-display font-bold text-white mb-4">&</span> <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Case Studies</span>
               </h2>
               <p className="text-neutral-400 max-w-2xl mx-auto">
                 A selection of web applications and automated workflows I&apos;ve built to solve real-world problems.
@@ -271,10 +378,12 @@ export default function Projects() {
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-white mb-2 line-clamp-1">{project.title}</h4>
                   <p className="text-sm text-neutral-400 mb-4 line-clamp-2 min-h-[2.5rem]">{project.description}</p>
-                  <div className="mt-auto">
-                    <span className="text-xs font-medium text-neutral-400 bg-cyan-500/10 px-3 py-1.5 rounded-full whitespace-nowrap">
-                      Powered by {project.tool}
-                    </span>
+                  <div className="mt-auto flex overflow-x-auto gap-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                    {project.tool?.map((tool, i) => (
+                      <span key={i} className="text-xs font-medium text-neutral-400 bg-cyan-500/10 px-3 py-1.5 rounded-full whitespace-nowrap">
+                        {tool}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </motion.div>
@@ -336,10 +445,17 @@ export default function Projects() {
                           {selectedProject.type}
                         </span>
                       )}
-                      {selectedProject.tool && (
-                        <span className="text-xs font-medium text-neutral-400 bg-neutral-800 px-2 py-0.5 rounded-md">
-                          Powered by {selectedProject.tool}
-                        </span>
+                      {selectedProject.tool && selectedProject.tool.length > 0 && (
+                        <div>
+                          <h4 className="text-sm font-bold text-neutral-500 uppercase tracking-wider mb-3">Technologies Used</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {selectedProject.tool.map((tool: string, i: number) => (
+                              <span key={i} className="text-sm font-medium px-3 py-1.5 rounded-lg text-neutral-300 bg-cyan-500/10 border border-cyan-500/20">
+                                {tool}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       )}
                     </div>
                     <h3 className="text-2xl md:text-4xl font-bold text-white">{selectedProject.title}</h3>
