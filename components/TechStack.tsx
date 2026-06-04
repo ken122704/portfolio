@@ -5,8 +5,10 @@ import {
   SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss,
   SiNodedotjs, SiExpress, SiFirebase, SiSupabase,
   SiMysql, SiPostgresql, SiMongodb,
-  SiGit,
-  SiPython,
+  SiGit, SiPython,
+  SiGooglesheets, SiAirtable, SiAsana, SiXero,
+  SiGooglegemini,
+  SiClaude, SiApollographql, SiGmail, SiGooglecloud,
 } from "react-icons/si";
 
 const techCategories = [
@@ -41,11 +43,26 @@ const techCategories = [
   {
     title: "TOOLS",
     skills: [
-      { name: "Git", icon: SiGit, color: "#F05032" },
-      { name: "n8n", icon: "https://cdn.simpleicons.org/n8n/EA4343", color: "#EA4343" },
-      { name: "Make", icon: "https://cdn.simpleicons.org/make/FFFFFF", color: "#6132D5" },
-      { name: "Zapier", icon: "https://cdn.simpleicons.org/zapier/FF4A00", color: "#FF4A00" },
-      { name: "GoHighLevel", icon: "/ghl.png", color: "#000000"  },
+      { name: "Git",           icon: SiGit,            color: "#F05032" },
+      { name: "n8n",           icon: "https://cdn.simpleicons.org/n8n/EA4343",    color: "#EA4343" },
+      { name: "Make",          icon: "https://cdn.simpleicons.org/make/FFFFFF",   color: "#6132D5" },
+      { name: "Zapier",        icon: "https://cdn.simpleicons.org/zapier/FF4A00", color: "#FF4A00" },
+      { name: "GoHighLevel",   icon: "/ghl.png",        color: "#000000" },
+
+      // Platforms
+      { name: "Airtable",      icon: SiAirtable,        color: "#18BFFF" },
+      { name: "Asana",         icon: SiAsana,           color: "#F06A6A" },
+      { name: "Xero",          icon: SiXero,            color: "#13B5EA" },
+      { name: "Google Sheets", icon: SiGooglesheets,    color: "#34A853" },
+      { name: "Gmail",         icon: SiGmail,           color: "#EA4335" },
+      { name: "Google Cloud",  icon: SiGooglecloud,     color: "#4285F4" },
+
+      // AI & APIs
+      { name: "Claude",        icon: SiClaude,          color: "#D97757" },
+      { name: "Gemini AI",     icon: SiGooglegemini,    color: "#8E75B2" },
+      { name: "OpenRouter",    icon: "https://cdn.simpleicons.org/openrouter/FFFFFF", color: "#6467F2" },
+      { name: "Apollo",        icon: SiApollographql,   color: "#311C87" },
+      { name: "VAPI",          icon: "/vapi.svg",       color: "#5B5FC7" },
     ]
   }
 ];
