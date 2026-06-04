@@ -27,7 +27,7 @@ export default function Footer() {
           <a href="https://github.com/ken122704" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-white transition-colors">
             <FaGithub size={20} />
           </a>
-          <a href="https://www.linkedin.com/in/besa-ken-charles-527154243" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/ken-charles-besa-527154243/" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-white transition-colors">
             <FaLinkedin size={20} />
           </a>
           <a href="mailto:kencharlesbesa27@gmail.com" className="text-foreground/60 hover:text-white transition-colors">
