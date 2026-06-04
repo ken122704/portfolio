@@ -134,6 +134,13 @@ const webProjects: Project[] = [
 
 const aiProjects: Project[] = [
   {
+    title: "Automated Lead Capture & AI Classification",
+    description:
+      "Sales teams waste hours on manual data entry, duplicate records, and delayed lead visibility. An end-to-end n8n automation was built to capture, deduplicate, and AI-classify leads in real time — automatically logging to Google Sheets, sending instant email replies, and notifying the team on Slack with priority scoring powered by Google Gemini.",
+    tool: ["n8n", "Jotform", "Google Sheets", "Google Gemini", "Gmail", "Slack"],
+    image: "Automated Lead Capture AI Classification.png"
+  },
+  {
     title: "Automated Leads Enrichment",
     description:
       "Sales teams lose high-value prospects due to slow, manual lead processing. An end-to-end Zapier automation was built to capture, enrich, and prioritize leads, accelerating routing so sales can instantly engage high-value opportunities.",
