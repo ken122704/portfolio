@@ -31,6 +31,13 @@ export default function Certifications() {
 
   const certifications = [
     {
+      title: "Claude Code in Action",
+      issuer: "Anthropic",
+      date: "2026",
+      description: "Demonstrated proficiency in using Claude AI for coding tasks, including code generation, debugging, and optimization.",
+      image: "/Anthropic.jpg"
+    },
+    {
       title: "System-wide OJT Orientation 2026",
       issuer: "USTP",
       date: "2026",
