@@ -32,7 +32,7 @@ export default function Certifications() {
   const certifications = [
     {
       title: "Essentials: Your First Workflows",
-      issuer: "Anthropic",
+      issuer: "n8n",
       date: "2026",
       description: "Successfully completed, reveived a passing grade and was awarded this certificate of completuion.",
       image: "/n8n-N8N101-Certificate.jpg"
