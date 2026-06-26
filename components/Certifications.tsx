@@ -31,6 +31,13 @@ export default function Certifications() {
 
   const certifications = [
     {
+      title: "Essentials: Your First Workflows",
+      issuer: "Anthropic",
+      date: "2026",
+      description: "Successfully completed, reveived a passing grade and was awarded this certificate of completuion.",
+      image: "/n8n-N8N101-Certificate.jpg"
+    },
+    {
       title: "Claude Code in Action",
       issuer: "Anthropic",
       date: "2026",
