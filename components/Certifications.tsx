@@ -135,7 +135,7 @@ export default function Certifications() {
               <button onClick={() => scroll("right")} className="p-2.5 rounded-full bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-400 transition-colors group"><ChevronRight size={20} className="text-neutral-500 group-hover:text-neutral-400" /></button>
             </div>
           </div>
-
+      
           <div ref={scrollRef} onScroll={handleScroll} className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-4 -mx-6 px-6 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden scroll-smooth">
             {certifications.map((cert, index) => (
               <motion.div
@@ -183,7 +183,7 @@ export default function Certifications() {
           </div>
         </div>
       </section>
-
+      
       {/* ================= FULL PREVIEW MODAL ================= */}
       <AnimatePresence>
         {selectedCert && (
@@ -208,13 +208,13 @@ export default function Certifications() {
               >
                 <X size={20} />
               </button>
-
+          
               {/* Large Image */}
               <div className="relative w-full h-[40vh] sm:h-[50vh] shrink-0 bg-neutral-900 flex items-center justify-center overflow-hidden">
                 <img src={selectedCert.image} alt={selectedCert.title} className="w-full h-full object-contain" />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 to-transparent opacity-80" />
               </div>
-
+          
               {/* Details Section */}
               <div className="p-6 md:p-10 flex flex-col gap-4 overflow-y-auto">
                 <div>

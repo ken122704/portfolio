@@ -70,7 +70,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
           >
-            Full-Stack Web Developer &<br className="hidden md:block" /> AI Automation Specialist.
+            AI Automation Specialist &<br className="hidden md:block" /> Full-Stack Web Developer.
           </motion.h2>
           
           <motion.p 
@@ -114,7 +114,7 @@ export default function Hero() {
           {/* Main Image Container */}
           <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 bg-background z-10 shadow-2xl">
             <Image 
-              src="/profile.jpg" 
+              src="/new-profile.png" 
               alt="Ken Besa" 
               fill 
               className="object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"

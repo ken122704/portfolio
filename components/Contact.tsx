@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Send, Phone,} from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-
+ 
 const SERVICE_ID = "service_tm47p1p";
 const TEMPLATE_ID = "template_vi6z977";
 const PUBLIC_KEY = "azao0yN8lsMzcN0Wo";
