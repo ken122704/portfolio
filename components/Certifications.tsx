@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Award, ArrowRight, ChevronLeft, ChevronRight, Maximize, X } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Maximize, X, ExternalLink } from 'lucide-react';
 
 interface Certification {
   title: string;
@@ -10,13 +10,12 @@ interface Certification {
   date: string;
   description: string;
   image: string;
+  credentialUrl?: string; 
 }
 
 export default function Certifications() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  
-  // NEW: State for the full preview modal
   const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
 
   // Prevent background scrolling when modal is open
@@ -29,76 +28,86 @@ export default function Certifications() {
     return () => { document.body.style.overflow = 'unset'; };
   }, [selectedCert]);
 
-  const certifications = [
+  const certifications: Certification[] = [
     {
       title: "CCNA: Introduction to Networks",
       issuer: "Cisco",
       date: "2026",
-      description: "successfully completed the Introduction to Networks course and achieved this student level credential",
-      image: "/CCNA-Cert.jpg"
+      description: "Successfully completed the Introduction to Networks course and achieved this student level credential.",
+      image: "/CCNA-Cert.jpg",
+      credentialUrl: "https://www.credly.com/badges/f46ca63e-62f5-421e-86c1-8a3265445cf1/public_url"
     },
     {
       title: "Essentials: Your First Workflows",
       issuer: "n8n",
       date: "2026",
-      description: "Successfully completed, reveived a passing grade and was awarded this certificate of completuion.",
-      image: "/n8n-N8N101-Certificate.jpg"
+      description: "Successfully completed, received a passing grade and was awarded this certificate of completion.",
+      image: "/n8n-N8N101-Certificate.jpg",
+      credentialUrl: "https://learn.n8n.io/certificates/f4b69f547204444e9bbfce4a45d58d3e"
     },
     {
       title: "Claude Code in Action",
       issuer: "Anthropic",
       date: "2026",
       description: "Demonstrated proficiency in using Claude AI for coding tasks, including code generation, debugging, and optimization.",
-      image: "/Anthropic.jpg"
+      image: "/Anthropic.jpg",
+      credentialUrl: "https://verify.skilljar.com/c/p4fic2tj6atw"
     },
     {
       title: "System-wide OJT Orientation 2026",
       issuer: "USTP",
       date: "2026",
       description: "Completed comprehensive training on workplace safety, communication, and organizational culture for all USTP OJT participants.",
-      image: "/OJT.jpg"
+      image: "/OJT.jpg",
+      credentialUrl: ""
     },
     {
       title: "TOPCIT Level 3",
       issuer: "TOPCIT (Korea)",
       date: "2025",
       description: "Validated practical competency in IT business, software development, and modern computing fundamentals.",
-      image: "/topcit.jpg"
+      image: "/topcit.jpg",
+      credentialUrl: ""
     },
-     {
+    {
       title: "GoHighLevel CRM Certification",
       issuer: "Technical Virtual Assistant",
       date: "2026",
       description: "Certified in utilizing GoHighLevel for CRM management, marketing automation, and client relationship strategies.",
-      image: "/ghl-cert.png"
+      image: "/ghl-cert.png",
+      credentialUrl: "https://my-certificates.com/certificates/69d7490bdfcac932b88bfb7e"
     },
     {
       title: "AI Automation with n8n",
       issuer: "Technical Virtual Assistant",
       date: "2026",
       description: "Mastered building complex, multi-step workflow automations, webhooks, and custom integrations using n8n.",
-      image: "/n8n-cert.png"
+      image: "/n8n-cert.png",
+      credentialUrl: "https://my-certificates.com/certificates/69ac2bf8c0b91469f8cd321c"
     },
     {
       title: "AI Automation with Zapier",
       issuer: "Technical Virtual Assistant",
       date: "2026",
       description: "Demonstrated proficiency in connecting web applications and automating repetitive business tasks with Zapier.",
-      image: "/zapier-cert.png"
+      image: "/zapier-cert.png",
+      credentialUrl: "https://my-certificates.com/certificates/698abd4e7664f5c8819293cf"
     },
     {
       title: "AI Automation with Make",
       issuer: "Technical Virtual Assistant",
       date: "2026",
       description: "Certified in designing advanced visual automation pipelines and managing complex data routing in Make.",
-      image: "/make-cert.png"
+      image: "/make-cert.png",
+      credentialUrl: "https://my-certificates.com/certificates/698f42a17664f5c88195be94"
     },
     {
       title: "Prompt Engineering",
       issuer: "Technical Virtual Assistant",
       date: "2026",
       description: "Certified in designing effective prompts for AI models and optimizing their performance.",
-      image: "/prompt-engineering-cert.png"
+      image: "/prompt-engineering-cert.png",
+      credentialUrl: "https://my-certificates.com/certificates/6990c049b34e429290df957e"
     }
   ];
 
@@ -153,7 +162,7 @@ export default function Certifications() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="w-[85vw] sm:w-[350px] md:w-[400px] h-[420px] shrink-0 snap-center bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden hover:border-neutral-500/50 transition-colors group flex flex-col relative"
               >
-                {/* NEW: Clickable Image Area */}
+                {/* Clickable Image Area */}
                 <div 
                   className="relative h-48 overflow-hidden shrink-0 cursor-pointer"
                   onClick={() => setSelectedCert(cert)}
@@ -168,8 +177,19 @@ export default function Certifications() {
                     </div>
                   </div>
 
-                  <div className="absolute top-4 right-4 w-10 h-10 bg-neutral-950/80 backdrop-blur-md rounded-full flex items-center justify-center border border-neutral-800">
-                    <Award size={20} className="text-cyan-400" />
+                  {/* External link icon, same style as the Web & AI project cards */}
+                  <div className="absolute top-4 right-4 flex gap-2 z-10">
+                    {cert.credentialUrl && (
+                      <a
+                        href={cert.credentialUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="w-8 h-8 bg-neutral-950/80 backdrop-blur-md rounded-full flex items-center justify-center border border-neutral-800 text-neutral-400 hover:text-white transition-colors"
+                      >
+                        <ExternalLink size={14} />
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -224,13 +244,27 @@ export default function Certifications() {
           
               {/* Details Section */}
               <div className="p-6 md:p-10 flex flex-col gap-4 overflow-y-auto">
-                <div>
-                  <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{selectedCert.title}</h3>
-                  <div className="flex items-center gap-3">
-                    <p className="text-base font-medium text-cyan-400">{selectedCert.issuer}</p>
-                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-700" />
-                    <p className="text-sm text-neutral-400">Issued: {selectedCert.date}</p>
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                  <div>
+                    <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{selectedCert.title}</h3>
+                    <div className="flex items-center gap-3">
+                      <p className="text-base font-medium text-cyan-400">{selectedCert.issuer}</p>
+                      <span className="w-1.5 h-1.5 rounded-full bg-neutral-700" />
+                      <p className="text-sm text-neutral-400">Issued: {selectedCert.date}</p>
+                    </div>
                   </div>
+
+                  {/* External link, styled the same as the Live App link on project cards */}
+                  {selectedCert.credentialUrl && (
+                    <a
+                      href={selectedCert.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-neutral-200 text-black rounded-lg text-sm font-medium transition-colors shrink-0"
+                    >
+                      <ExternalLink size={16} /> Verify Credential
+                    </a>
+                  )}
                 </div>
                 
                 <div className="w-full h-px bg-neutral-800 my-2" />
