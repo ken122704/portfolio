@@ -31,6 +31,13 @@ export default function Certifications() {
 
   const certifications = [
     {
+      title: "CCNA: Introduction to Networks",
+      issuer: "Cisco",
+      date: "2026",
+      description: "successfully completed the Introduction to Networks course and achieved this student level credential",
+      image: "/CCNA-Cert.jpg"
+    },
+    {
       title: "Essentials: Your First Workflows",
       issuer: "n8n",
       date: "2026",
