@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ken Besa | Full-Stack Developer & AI Automation",
+  title: "Ken Besa | AI Automation Specialist & Full-Stack Developer",
   description:
-    "Portfolio of Ken Charles Besa — Full-Stack Developer and AI Automation specialist based in Cagayan de Oro, Philippines.",
+    "Portfolio of Ken Charles Besa — AI Automation Specialist & Full-Stack Developer based in Cagayan de Oro, Philippines.",
 };
 
 export default function RootLayout({
