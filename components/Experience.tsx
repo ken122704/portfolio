@@ -21,6 +21,15 @@ const experiences = [
     description: "Engineered the frontend for an automated digital system, optimizing the process for student document requests.",
     icon: <Code2 size={20} className="text-cyan-400" />,
   },
+  
+  {
+    type: "work",
+    title: "Software Engineer (Part-Time)",
+    organization: "Center for Entrepreneurship and Technology - USTP (Startup Incubation Program)",
+    date: "June – Aug 2026",
+    description: "Engineered an AI-powered live call coaching platform that delivers real-time reply suggestions and post-call communication insights. Architected and developed cross-platform web and desktop applications from a shared codebase. Built a scalable SaaS product as part of a university startup incubation program.",
+    icon: <Code2 size={20} className="text-cyan-400" />,
+  },
 
   {
     type: "education",

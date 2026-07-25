@@ -72,6 +72,17 @@ const webProjects: Project[] = [
   {
     title: "IRequest",
     description:
+      "Virtual Assistants often struggle to respond confidently during live client calls. HusAI solves this with AI-powered real-time reply suggestions and post-call communication coaching. Developed as a scalable cross-platform SaaS through USTP's startup incubation program.",
+    tech: ["React", "TypeScript", "Node.js", "Supabase"],
+    type: "Web App",
+    image: "HusAI.png",
+    githubLink: "https://github.com/Birky-andrie/HusAI",
+    liveLink: "hus-ai-five.vercel.app"
+  },
+
+  {
+    title: "IRequest",
+    description:
       "Manual document requests cause slow processing and administrative bottlenecks. To solve this, a centralized React and Django web portal was built for the university registrar, streamlining operations, cutting backlog, and providing rapid access to records.",
     tech: ["React", "JavaScript", "Django"],
     type: "Web App",
