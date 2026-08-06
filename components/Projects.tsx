@@ -70,7 +70,7 @@ export default function Projects() {
 
 const webProjects: Project[] = [
   {
-    title: "IRequest",
+    title: "HusAI",
     description:
       "Virtual Assistants often struggle to respond confidently during live client calls. HusAI solves this with AI-powered real-time reply suggestions and post-call communication coaching. Developed as a scalable cross-platform SaaS through USTP's startup incubation program.",
     tech: ["React", "TypeScript", "Node.js", "Supabase"],
