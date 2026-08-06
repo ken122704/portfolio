@@ -263,13 +263,14 @@ export default function Certifications() {
   };
 
   // Click handler allowing selection OR centering
-  const handleCardClick = (cert: Certification, index: number, e: React.MouseEvent) => {
-    // If it was a drag gesture rather than a click, ignore it
-    if (dragState.current.distance > 10) {
-      e.preventDefault();
-      e.stopPropagation();
-      return;
-    }
+  // Click handler allowing immediate preview selection
+    const handleCardClick = (cert: Certification, index: number, e: React.MouseEvent) => {
+      // If the user was dragging the carousel rather than clicking, ignore the click
+      if (dragState.current.distance > 10) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
 
     if (index !== closestDomIndex) {
       // If clicking an inactive card, gracefully center it
@@ -341,7 +342,7 @@ export default function Certifications() {
                   transition={{ duration: 0.5, delay: (index % certifications.length) * 0.05 }}
                   onClick={(e) => handleCardClick(cert, index, e)}
                   // Dynamic class assignment to generate the Premium depth-scale feel
-                  className={`w-[85vw] sm:w-[350px] md:w-[400px] h-[420px] shrink-0 snap-center rounded-2xl overflow-hidden transition-all duration-500 ease-out flex flex-col relative
+                  className={`group w-[85vw] sm:w-[350px] md:w-[400px] h-[420px] shrink-0 snap-center rounded-2xl overflow-hidden transition-all duration-500 ease-out flex flex-col relative
                     ${isActive
                       ? 'scale-100 opacity-100 shadow-[0_0_30px_rgba(34,211,238,0.15)] border border-cyan-500/40 bg-neutral-900 z-10 cursor-pointer'
                       : 'scale-[0.85] opacity-40 shadow-none border border-neutral-800 bg-neutral-950 z-0 hover:opacity-60 cursor-pointer'
@@ -354,9 +355,9 @@ export default function Certifications() {
                     
                     {/* Hover Overlay indicating it can be expanded (Only shows cleanly on active card) */}
                     <div className="absolute inset-0 bg-neutral-950/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="flex items-center gap-2 bg-neutral-900/80 px-4 py-2 rounded-full border border-neutral-700 text-white font-medium text-sm">
-                        <Maximize size={16} /> Preview
-                      </div>
+                    <div className="flex items-center gap-2 bg-neutral-900/80 px-4 py-2 rounded-full border border-neutral-700 text-white font-medium text-sm">
+                      <Maximize size={16} /> Preview
+                    </div>
                     </div>
                     <div className="absolute top-4 right-4 flex gap-2 z-10">
                       {cert.credentialUrl && (
