@@ -33,6 +33,14 @@ export default function Certifications() {
 
   const certifications: Certification[] = [
     {
+      title: "Integrations: APIs & Connected Workflows",
+      issuer: "n8n",
+      date: "2026",
+      description: "Successfully completed, received a passing grade and was awarded this certificate of completion.",
+      image: "/n8n-N8N102-Certificate.jpg",
+      credentialUrl: "https://learn.n8n.io/certificates/e3efa31133fe4129aeb602722ace2674"
+    },
+    {
       title: "CCNA: Introduction to Networks",
       issuer: "Cisco",
       date: "2026",
