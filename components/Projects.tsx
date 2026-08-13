@@ -333,7 +333,7 @@ export default function Projects() {
       type: "Web App",
       image: "HusAI.png",
       githubLink: "https://github.com/Birky-andrie/HusAI",
-      liveLink: "hus-ai-five.vercel.app"
+      liveLink: "https://hus-ai-five.vercel.app/"
     },
     {
       title: "IRequest",
