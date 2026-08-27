@@ -33,10 +33,18 @@ export default function Certifications() {
 
   const certifications: Certification[] = [
     {
+      title: "In Practice: AI, Testing & Best Practices",
+      issuer: "n8n",
+      date: "2026",
+      description: "Learned to build AI-powered workflows, systematically debug automations, and apply testing and best practices for maintainable, production-ready workflows.",
+      image: "/n8n-N8N103-Certificate.jpg",
+      credentialUrl: "https://learn.n8n.io/certificates/e3efa31133fe4129aeb602722ace2674"
+    },
+    {
       title: "Integrations: APIs & Connected Workflows",
       issuer: "n8n",
       date: "2026",
-      description: "Successfully completed, received a passing grade and was awarded this certificate of completion.",
+      description: "Learned to build integrated workflows using APIs, webhooks, authentication, conditional logic, loops, sub-workflows, data tables, and error handling.",
       image: "/n8n-N8N102-Certificate.jpg",
       credentialUrl: "https://learn.n8n.io/certificates/e3efa31133fe4129aeb602722ace2674"
     },
@@ -52,7 +60,7 @@ export default function Certifications() {
       title: "Essentials: Your First Workflows",
       issuer: "n8n",
       date: "2026",
-      description: "Successfully completed, received a passing grade and was awarded this certificate of completion.",
+      description: "Learned n8n fundamentals, including the interface, triggers, scheduling, data flow, and building basic automation workflows.",
       image: "/n8n-N8N101-Certificate.jpg",
       credentialUrl: "https://learn.n8n.io/certificates/f4b69f547204444e9bbfce4a45d58d3e"
     },
