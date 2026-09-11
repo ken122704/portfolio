@@ -7,19 +7,22 @@ const services = [
   {
     title: "AI & Business Automation",
     description:
-      "Designing intelligent workflows that use AI to automate repetitive processes, handle business tasks, and turn manual operations into efficient systems.",
+      "Designing intelligent workflows that use AI to automate repetitive processes, handle business tasks, and improve operational efficiency.",
+    tools: "n8n · Make · Zapier · Gemini · OpenAI · Claude",
     icon: <BrainCircuit className="text-blue-400" size={32} />,
   },
   {
     title: "CRM & Automation",
     description:
       "Connecting CRMs, forms, communication tools, and business apps to automate lead management, follow-ups, customer workflows, and data synchronization.",
+    tools: "GoHighLevel · Airtable · Google Workspace · APIs · Webhooks",
     icon: <Workflow className="text-brand" size={32} />,
   },
   {
     title: "Full-Stack Development",
     description:
-      "Building responsive and scalable web applications with modern frontend and backend technologies, from user interfaces to APIs, databases, and integrations.",
+      "Building responsive and scalable web applications, from modern user interfaces to APIs, databases, and third-party integrations.",
+    tools: "React · Next.js · TypeScript · Node.js · Python · Supabase",
     icon: <MonitorSmartphone className="text-cyan-400" size={32} />,
   },
 ];
@@ -37,10 +40,14 @@ export default function Services() {
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             <span className="text-foreground">My </span>
-            <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
+            <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Services
+            </span>
           </h2>
-          <p className=" text-neutral-400 max-w-2xl mx-auto text-lg">
-           I build intelligent automations and modern software that help businesses work smarter and scale efficiently.
+
+          <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
+            I build intelligent automations and modern software that help
+            businesses work smarter and scale efficiently.
           </p>
         </motion.div>
 
@@ -56,15 +63,29 @@ export default function Services() {
             >
               {/* Subtle hover glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-brand/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
               <div className="relative z-10">
                 <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
-                <p className=" text-neutral-400 leading-relaxed">
+
+                <h3 className="text-xl font-bold text-foreground mb-3">
+                  {service.title}
+                </h3>
+
+                <p className="text-neutral-400 leading-relaxed">
                   {service.description}
                 </p>
+
+                <div className="mt-6 pt-5 border-t border-white/5">
+                  <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">
+                    Tools & Technologies
+                  </p>
+
+                  <p className="text-sm text-neutral-400 leading-relaxed">
+                    {service.tools}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}
