@@ -78,7 +78,7 @@ export default function Hero() {
             className="text-lg text-neutral-400 mb-10 max-w-xl leading-relaxed"
           >
             I build intelligent workflows, scalable web applications, and AI-powered 
-            solutions that save time and drive growth. Based in Cagayan de Oro City.
+            solutions that save time and drive growth. Based in Cagayan de Oro City, Philippines.
           </motion.p>
 
           <motion.div 
