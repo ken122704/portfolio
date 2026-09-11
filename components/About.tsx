@@ -31,13 +31,13 @@ export default function About() {
             className="md:col-span-2 space-y-6 text-neutral-400  leading-relaxed text-lg"
           >
             <p>
-              I&apos;m currently pursuing my B.S. in Computer Science at the University of Science and Technology of Southern Philippines (2023–Present), Full-Stack Web Developer, and AI Automation Specialist with a strong foundation in AI systems.
+              I&apos;m currently pursuing my B.S. in Computer Science at the University of Science and Technology of Southern Philippines (2023–Present), focused on AI Automation and building systems that help businesses work more efficiently.
             </p>
             <p>
-              I started in the data layer of AI, working for 1+ year as a Data Annotator on 3D LiDAR datasets for autonomous driving—building a practical understanding of how AI models learn from real-world data.
+              I started in the data layer of AI, working for over a year as a Data Annotator on 3D LiDAR datasets for autonomous driving. This gave me practical insight into how AI models learn from real-world data and how structured, accurate data supports intelligent systems.
             </p>
             <p>
-             Now, I focus on building scalable, production-ready solutions. From full-stack applications to automation workflows using tools like n8n and Zapier, I design systems that solve real-world problems efficiently.
+             Now, I focus on designing and building business automations—from lead management and CRM workflows to AI-powered processes and integrations. I use tools like n8n, GoHighLevel, Zapier, and Make, while leveraging my full-stack development skills when a solution requires custom applications, APIs, or integrations.
             </p>
           </motion.div>
 
@@ -76,7 +76,7 @@ export default function About() {
                 <div>
                   <p className="font-medium text-neutral-400 ">Experience</p>
                   <p className="text-sm text-neutral-400 ">1+ Year (Data Annotation)</p>
-                  <p className="text-sm text-neutral-400 ">Mar - Dec 2025 (Web Developer - USTP Registrar)</p>
+                  <p className="text-sm text-neutral-400 ">June – Aug 2026 (Startup Incubation Program - Intern)</p>
                 </div>
               </div>
 
@@ -84,7 +84,7 @@ export default function About() {
                 <Code2 className="text-brand shrink-0 mt-1" size={20} />
                 <div>
                   <p className="font-medium text-neutral-400 ">Focus</p>
-                  <p className="text-sm text-neutral-400 ">Full-Stack Web Dev & AI Automations</p>
+                  <p className="text-sm text-neutral-400 ">Automation, CRM & Full-Stack Dev</p>
                 </div>
               </div>
             </div>
