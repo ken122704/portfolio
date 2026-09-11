@@ -5,19 +5,22 @@ import { MonitorSmartphone, Workflow, BrainCircuit } from "lucide-react";
 
 const services = [
   {
-    title: "Full-Stack Web Development",
-    description: "Building responsive, secure, and scalable web applications from the ground up using React, Next.js, and robust backend technologies.",
-    icon: <MonitorSmartphone className="text-cyan-400" size={32} />,
+    title: "AI & Business Automation",
+    description:
+      "Designing intelligent workflows that use AI to automate repetitive processes, handle business tasks, and turn manual operations into efficient systems.",
+    icon: <BrainCircuit className="text-blue-400" size={32} />,
   },
   {
-    title: "Business Workflow Automation",
-    description: "Designing intelligent, hands-free systems using n8n, Zapier, and Make to connect apps, manage leads, and automate repetitive tasks.",
+    title: "CRM & Automation",
+    description:
+      "Connecting CRMs, forms, communication tools, and business apps to automate lead management, follow-ups, customer workflows, and data synchronization.",
     icon: <Workflow className="text-brand" size={32} />,
   },
   {
-    title: "AI Integration Solutions",
-    description: "Embedding custom AI capabilities—like conversational chatbots, smart content generators, and resume optimizers—directly into your business tools.",
-    icon: <BrainCircuit className="text-blue-400" size={32} />,
+    title: "Full-Stack Development",
+    description:
+      "Building responsive and scalable web applications with modern frontend and backend technologies, from user interfaces to APIs, databases, and integrations.",
+    icon: <MonitorSmartphone className="text-cyan-400" size={32} />,
   },
 ];
 
@@ -37,7 +40,7 @@ export default function Services() {
             <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
           </h2>
           <p className=" text-neutral-400 max-w-2xl mx-auto text-lg">
-            Bridging the gap between modern web architecture and cutting-edge artificial intelligence to deliver complete digital solutions.
+           I build intelligent automations and modern software that help businesses work smarter and scale efficiently.
           </p>
         </motion.div>
 
