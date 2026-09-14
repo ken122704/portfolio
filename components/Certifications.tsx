@@ -38,7 +38,7 @@ export default function Certifications() {
       date: "2026",
       description: "Learned to build AI-powered workflows, systematically debug automations, and apply testing and best practices for maintainable, production-ready workflows.",
       image: "/n8n-N8N103-Certificate.jpg",
-      credentialUrl: "https://learn.n8n.io/certificates/e3efa31133fe4129aeb602722ace2674"
+      credentialUrl: "https://learn.n8n.io/certificates/9d2d44561a314f3ca80ce2f315967edf"
     },
     {
       title: "Integrations: APIs & Connected Workflows",
