@@ -72,7 +72,7 @@ export default function Contact() {
           </h2>
 
           <p className="text-neutral-400 text-lg max-w-2xl leading-relaxed">
-            Whether you need a custom web application or an automated workflow to scale your business, I&apos;m here to help.
+            Whether you need an automated workflow or a custom web application to scale your business, I&apos;m here to help.
           </p>
         </motion.div>
 

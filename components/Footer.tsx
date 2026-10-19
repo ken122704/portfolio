@@ -15,7 +15,7 @@ export default function Footer() {
           KEN
         </Link>
           <p className="text-foreground/60 text-sm mt-2 text-neutral-400 ">
-            Full-Stack Developer & AI Automation Specialist.
+            AI Automation Specialist & Full-Stack Developer.
           </p>
           <p className="text-foreground/40 text-xs mt-6 text-neutral-400 ">
             © {currentYear} Ken Charles I. Besa. All rights reserved.
