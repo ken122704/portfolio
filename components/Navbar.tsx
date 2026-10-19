@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Experience", href: "#experience" },
   { name: "Tech Stack", href: "#techstack" },
   { name: "Certifications", href: "#certifications" },
-  { name: "Projects", href: "#projects" },
+  { name: "Works", href: "#projects" },
 ];
 
 export default function Navbar() {

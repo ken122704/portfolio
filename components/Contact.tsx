@@ -21,7 +21,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id="contact" className="py-24 px-6 relative z-10">
+    <section id="contact" className="py-12 px-6 relative z-10">
       <div className="max-w-7xl mx-auto">
 
         {/* TOP SECTION: Centered Headers */}
@@ -30,7 +30,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center mb-16"
+          className="flex flex-col items-center text-center mb-6"
         >
           <motion.div
             initial="initial"

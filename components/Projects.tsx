@@ -467,7 +467,7 @@ export default function Projects() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
-                Featured <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Works</span> <span className="text-3xl md:text-5xl font-display font-bold text-white mb-4">&</span> <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Case Studies</span>
+                Featured <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Works</span> <span className="text-3xl md:text-5xl font-display font-bold text-white mb-4">&</span> <span className="bg-gradient-to-r from-brand via-blue-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
               </h2>
               <p className="text-neutral-400 max-w-2xl mx-auto">
                 A selection of web applications and automated workflows I&apos;ve built to solve real-world problems.
@@ -478,7 +478,7 @@ export default function Projects() {
           {/* ================= WEB PROJECTS ================= */}
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-2xl font-bold text-white flex items-center gap-3">
-              <span className="w-8 h-px bg-cyan-600" /> Web & Software
+              <span className="w-8 h-px bg-cyan-600" /> Software Development
             </h3>
             <span className="text-xs font-medium text-neutral-500 flex items-center gap-2 animate-pulse">
               Drag or Swipe <ArrowRight size={12} />
@@ -494,7 +494,7 @@ export default function Projects() {
           {/* ================= AI PROJECTS ================= */}
           <div className="flex items-center justify-between mb-2 mt-8">
             <h3 className="text-2xl font-bold text-white flex items-center gap-3">
-              <span className="w-8 h-px bg-cyan-500" /> AI & Automation
+              <span className="w-8 h-px bg-cyan-500" /> AI Automation & CRM Management
             </h3>
             <span className="text-xs font-medium text-neutral-500 flex items-center gap-2 animate-pulse">
               Drag or Swipe <ArrowRight size={12} />
